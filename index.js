@@ -41,6 +41,20 @@ const contactInfo = [
   },
 ];
 
+// Render list items on first render
+const contacList = document.getElementById("contact-list");
+contactInfo.forEach((contact) => {
+  const listItem = document.createElement("li");
+  listItem.innerHTML = `
+    <div class="name-status-container">
+      <div class="circle"></div>
+      <p>${contact.name}</p>
+    </div>
+    <p class="contact-info">${contact.email}</p>
+  `;
+  contacList.appendChild(listItem);
+});
+
 const handleSelectChange = () => {
   const desiredContactInfoValue =
     document.getElementById("contact-select").value;
@@ -50,7 +64,6 @@ const handleSelectChange = () => {
 
   contactInfoElements.forEach((element) => {
     const individualContactData = contactInfo.find((contact) => {
-      console.log("contact", contact[oppositeContactInfoValue]);
       return contact[oppositeContactInfoValue] === element.innerText;
     });
     element.innerText = individualContactData[desiredContactInfoValue];
