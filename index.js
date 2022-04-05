@@ -65,12 +65,54 @@ const contactInfo = [
   },
 ];
 
+const handleSelectChange = () => {
+  const desiredContactInfoValue =
+    document.getElementById("contact-select").value;
+  const oppositeContactInfoValue =
+    desiredContactInfoValue === "phone" ? "email" : "phone";
+  const contactInfoElements = document.querySelectorAll(".contact-info");
+
+  contactInfoElements.forEach((element) => {
+    const individualContactData = contactInfo.find((contact) => {
+      return contact[oppositeContactInfoValue] === element.innerText;
+    });
+    element.innerText = individualContactData[desiredContactInfoValue];
+  });
+};
+
+const handleListItemClicked = (event, contactName) => {
+  console.log("list item clicked", event.target, contactName);
+  const isActive = event.target.className === "highlighted";
+  const nameContainer = document.getElementById(
+    `${contactName}-name-status-container`
+  );
+  const dropDown = document.getElementById("dropdown");
+  const root = document.getElementById(`${contactName}-list-item`);
+
+  if (isActive) {
+    root.className = "";
+    nameContainer.className = "name-status-container";
+    dropDown.className = "";
+  } else {
+    root.className = "highlighted";
+    nameContainer.className = "name-status-container highlighted";
+    dropDown.className = "show";
+  }
+};
+
 // Render list items
 const contacList = document.getElementById("contact-list");
 contactInfo.forEach((contact) => {
   const listItem = document.createElement("li");
+  listItem.id = `${contact.name}-list-item`;
+  listItem.addEventListener("click", (e) =>
+    handleListItemClicked(e, contact.name)
+  );
+
   listItem.innerHTML = `
-    <div class="name-status-container">
+    <div class="name-status-container" id="${
+      contact.name
+    }-name-status-container">
       <div class="circle ${contact.status}"></div>
       <p>${contact.name}</p>
     </div>
@@ -88,33 +130,3 @@ contactInfo.forEach((contact) => {
   `;
   contacList.appendChild(listItem);
 });
-
-const handleSelectChange = () => {
-  const desiredContactInfoValue =
-    document.getElementById("contact-select").value;
-  const oppositeContactInfoValue =
-    desiredContactInfoValue === "phone" ? "email" : "phone";
-  const contactInfoElements = document.querySelectorAll(".contact-info");
-
-  contactInfoElements.forEach((element) => {
-    const individualContactData = contactInfo.find((contact) => {
-      return contact[oppositeContactInfoValue] === element.innerText;
-    });
-    element.innerText = individualContactData[desiredContactInfoValue];
-  });
-};
-
-const handleListItemClicked = (element) => {
-  const isActive = element.className === "highlighted";
-  const nameContainer = document.getElementById("name-status-container");
-  const dropDown = document.getElementById("dropdown");
-  if (isActive) {
-    element.className = "";
-    nameContainer.className = "name-status-container";
-    dropDown.className = "";
-  } else {
-    element.className = "highlighted";
-    nameContainer.className = "name-status-container highlighted";
-    dropDown.className = "show";
-  }
-};
