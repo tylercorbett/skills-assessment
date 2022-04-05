@@ -14,14 +14,14 @@
         <h1>Contacts</h1>
       </header>
       <ul id="contact-list">
-        <li>
-          <div class="name-status-container">
+        <li onclick="handleListItemClicked(this)">
+          <div class="name-status-container" id="name-status-container">
             <div class="circle active"></div>
             <p>DELETE</p>
           </div>
           <div class="phone-email-container">
             <p class="contact-info">DELETE THIS</p>
-            <aside>
+            <aside id="dropdown">
               <a href="mailto:tyler@gmail.com">tyler@gmail.com</a>
               <p>555.555.5555</p>
               <p>

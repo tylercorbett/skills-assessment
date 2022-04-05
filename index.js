@@ -77,3 +77,18 @@ const handleSelectChange = () => {
     element.innerText = individualContactData[desiredContactInfoValue];
   });
 };
+
+const handleListItemClicked = (element) => {
+  const isActive = element.className === "highlighted";
+  const nameContainer = document.getElementById("name-status-container");
+  const dropDown = document.getElementById("dropdown");
+  if (isActive) {
+    element.className = "";
+    nameContainer.className = "name-status-container";
+    dropDown.className = "";
+  } else {
+    element.className = "highlighted";
+    nameContainer.className = "name-status-container highlighted";
+    dropDown.className = "show";
+  }
+};

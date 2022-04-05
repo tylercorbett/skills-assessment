@@ -103,8 +103,18 @@ aside {
   width: 100%;
   height: 290%;
   padding: 1rem;
+  display: none;
 }
 
 a {
   color: #389298;
+}
+
+.highlighted {
+  background: #484848;
+  border-right: none;
+}
+
+.show {
+  display: flex;
 }
