@@ -4,48 +4,64 @@ const contactInfo = [
     email: "christian@yahoo.com",
     phone: "323-555-1234",
     status: "active",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Rich",
     email: "rich@tripod.com",
     phone: "323-333-1234",
     status: "active",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Scott",
     email: "scott@mailinator.com",
     phone: "323-444-1234",
     status: "active",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Danny",
     email: "danny@hotmail.com",
     phone: "323-111-1234",
     status: "active",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Taka",
     email: "taka@myspace.com",
     phone: "432-999-1234",
     status: "away",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Tim",
     email: "tim@netscape.com",
     phone: "323-331-1234",
     status: "busy",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Patrick",
     email: "patrick@live.com",
     phone: "323-931-1234",
     status: "active",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
   {
     name: "Jacques",
     email: "jacques@aol.com",
     phone: "123-000-1234",
     status: "busy",
+    addressLine1: "6539 Wilton Ave.",
+    addressLine2: "Culver City CA 90234",
   },
 ];
 
@@ -64,8 +80,8 @@ contactInfo.forEach((contact) => {
         <a href="mailto:${contact.email}">${contact.email}</a>
         <p>${contact.phone.replace("-", ".")}</p>
         <p>
-          6539 Wilton Ave.<br />
-          Culver City CA 90234
+          ${contact.addressLine1}<br />
+          ${contact.addressLine2}
         </p>
       </aside>
     </div>
