@@ -66,12 +66,16 @@ footer {
   padding: 1rem;
   font-size: 0.8rem;
   text-align: right;
-  height: 4rem;
+  height: 3.9rem;
   box-shadow: black 0px -2px 50px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 select {
-  border-radius: .3rem;
-  padding: .1rem;
-  padding-right: .8rem;
+  border-radius: 0.3rem;
+  padding: 0.1rem;
+  padding-right: 0.8rem;
 }
