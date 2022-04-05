@@ -1,0 +1,23 @@
+.contacts-container {
+  background: #343434;
+  color: white;
+  width: 23rem;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  border: 1px solid #4D4D4D;
+  font-family:  sans-serif;
+}
+
+header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:nth-child(even) {
+  background: #212121;
+}
