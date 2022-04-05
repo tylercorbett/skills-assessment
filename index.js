@@ -94,6 +94,20 @@ const handleListItemClicked = (event, contactName) => {
     nameContainer.className = "name-status-container";
     dropDown.className = "";
   } else {
+    // Close all highlighted items
+    const allListItems = document.getElementsByTagName("li");
+    allListItems.forEach((listItemElement) => {
+      listItemElement.className = "";
+    });
+
+    const allDropdowns = document.getElementsByTagName("aside");
+    allDropdowns.forEach((dropdownElement) => {
+      dropdownElement.className = "";
+    });
+
+    
+
+    // Open new active element
     root.className = "highlighted";
     nameContainer.className = "name-status-container highlighted";
     dropDown.className = "show";
