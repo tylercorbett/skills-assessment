@@ -82,12 +82,12 @@ const handleSelectChange = () => {
 
 const handleListItemClicked = (event, contactName) => {
   console.log("list item clicked", event.target, contactName);
-  const isActive = event.target.className === "highlighted";
   const nameContainer = document.getElementById(
     `${contactName}-name-status-container`
   );
   const dropDown = document.getElementById("dropdown");
   const root = document.getElementById(`${contactName}-list-item`);
+  const isActive = root.className === "highlighted";
 
   if (isActive) {
     root.className = "";
