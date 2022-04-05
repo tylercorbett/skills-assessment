@@ -85,7 +85,7 @@ const handleListItemClicked = (event, contactName) => {
   const nameContainer = document.getElementById(
     `${contactName}-name-status-container`
   );
-  const dropDown = document.getElementById("dropdown");
+  const dropDown = document.getElementById(`${contactName}-dropdown`);
   const root = document.getElementById(`${contactName}-list-item`);
   const isActive = root.className === "highlighted";
 
@@ -118,7 +118,7 @@ contactInfo.forEach((contact) => {
     </div>
     <div class="phone-email-container">
       <p class="contact-info">${contact.email}</p>
-      <aside id="dropdown">
+      <aside id="${contact.name}-dropdown">
         <a href="mailto:${contact.email}">${contact.email}</a>
         <p>${contact.phone.replace("-", ".")}</p>
         <p>
