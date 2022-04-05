@@ -55,7 +55,7 @@ li:nth-child(even) {
   border-right: 1px solid #1c1c1c;
 }
 
-.email {
+.contact-info {
   opacity: 0.3;
   align-self: center;
   margin-left: 1rem;
