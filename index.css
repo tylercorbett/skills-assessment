@@ -37,11 +37,15 @@ li:nth-child(even) {
   border-radius: 50%;
 }
 
-.red-bg {
+.active {
+  background: #50fd1f;
+}
+
+.away {
   background: #ef040c;
 }
 
-.yellow-bg {
+.busy {
   background: #c1c212;
 }
 
