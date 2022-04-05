@@ -69,6 +69,8 @@ footer {
   height: 3.9rem;
   box-shadow: black 0px -2px 50px;
   border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
