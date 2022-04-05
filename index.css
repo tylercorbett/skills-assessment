@@ -4,20 +4,74 @@
   width: 23rem;
   border-radius: 1rem;
   margin: 5rem auto;
-  border: 1px solid #4D4D4D;
-  font-family:  sans-serif;
+  border: 1px solid #4d4d4d;
+  font-family: sans-serif;
 }
 
 header {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 4rem;
 }
 
 li {
   cursor: pointer;
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+  display: grid;
+  grid-template-columns: 37% 1fr;
 }
 
 li:nth-child(even) {
   background: #212121;
+}
+
+.circle {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #50fd1f;
+  margin-right: 1.15rem;
+  border-radius: 50%;
+}
+
+.red-bg {
+  background: #ef040c;
+}
+
+.yellow-bg {
+  background: #c1c212;
+}
+
+.name-status-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-right: 1px solid #1c1c1c;
+}
+
+.email {
+  opacity: 0.3;
+  align-self: center;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: right;
+  height: 4rem;
+  box-shadow: black 0px -2px 50px;
+}
+
+select {
+  border-radius: .3rem;
+  padding: .1rem;
+  padding-right: .8rem;
 }
