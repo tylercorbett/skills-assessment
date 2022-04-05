@@ -58,7 +58,17 @@ contactInfo.forEach((contact) => {
       <div class="circle ${contact.status}"></div>
       <p>${contact.name}</p>
     </div>
-    <p class="contact-info">${contact.email}</p>
+    <div class="phone-email-container">
+      <p class="contact-info">${contact.email}</p>
+      <aside id="dropdown">
+        <a href="mailto:${contact.email}">${contact.email}</a>
+        <p>${contact.phone.replace("-", ".")}</p>
+        <p>
+          6539 Wilton Ave.<br />
+          Culver City CA 90234
+        </p>
+      </aside>
+    </div>
   `;
   contacList.appendChild(listItem);
 });
