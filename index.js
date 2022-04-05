@@ -49,7 +49,7 @@ const contactInfo = [
   },
 ];
 
-// Render list items on first render
+// Render list items
 const contacList = document.getElementById("contact-list");
 contactInfo.forEach((contact) => {
   const listItem = document.createElement("li");
